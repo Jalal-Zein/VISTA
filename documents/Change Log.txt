@@ -1,0 +1,113 @@
+﻿[ Mon 12 Apr 21 ] :
+
+* OFFICIAL BIRTHDAY
+* Revived discord JaeiBot
+* researched sheets' api
+
+[Tues 13 Apr 21]:
+
+* Made new command and event handlers
+* Testing embed messages
+* Made the basis of what DARA will be on Sheets
+* Made the help function
+
+[Wednes 14 Apr 21]:
+
+* implemented Google Sheets API
+* was able to write getall which sent to discord everything in that sheet that is linked
+* implemented mechanism to sort and give schedule of a day depending on a cell value (getall)
+
+[Thurs 15 Apr 21]:
+
+* managed to adjust the get function (gat) to work for an entire schedule
+
+[Fri 16 Apr 21]: 
+
+* finished commenting on stuff 
+
+[Sat 17 Apr 21]:
+
+* made the timestamp thing work for gat 
+
+[Sun 18 Apr 21]:
+
+* managed to make the time stamp thing work for all days
+* "theorizes about get_now and get_x and  gatx"
+
+[Mon 19 Apr 21]:
+
+* managed to make get_now (aka ..gn) to work with help.js Integration and full documentation
+
+[Thurs 22 Apr 21]:
+
+* finished get_all_x aka gax
+* made the range_formatter
+* made init3_to_full
+* got get_x aka gx fully working
+* made hr_to_full
+
+[Fri 23 Apr 21]:
+
+* adding default day feature to gx (incomplete)
+
+[Sun 2 May 21]:
+
+* default day feature in gx complete
+
+[Tues 4 May 21]:    
+
+* added basic functionality to get_tasks
+
+[Wed 5 May 21]:
+
+* completed get_tasks.js aka gtl 
+
+[Sat 22 May 21]: 
+
+* figured out the cell update mechanism
+* mostly finished edit_task_list.js
+
+[Sun 23 May 21]: 
+
+* finalized edit_task_list.js
+
+[Mon 24 May 21]: 
+
+* implemented add_task fully
+* implemented delete_task fully
+
+[Fri 28 May 21]:
+
+* implemented get_tasks_lists.js fully
+* implemented add_task_list.js fully
+
+[Sun 30 May 21]: 
+
+* implemented delete_task_list.js fully
+* fixed add_task.js 
+* implemented edit_task_list.js 
+
+[Mon 31 May 21]:
+
+* updated help.js and made it future proof and actually helpful
+
+[Mon 28 Jun 21]:
+
+* implemented hourly notifications for new tasks
+
+[Tues 29 Jun 21]:  
+
+* implemented scheduled routine reminders
+* get_routine
+* get_routine_lists
+* add_to_routine
+* add_routine
+
+[Wednes 30 Jun 21]:
+
+* edit_routine_task
+* edit_routine
+* delete_routine
+* delete_routine_task
+* implemented a mechanism by which get commands won't send empty messages
+* edit_sched

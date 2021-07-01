@@ -1,0 +1,8 @@
+[Thurs 22 Apr 21]: 
+* gax > get_all_x.js > if you call the command and mistype the day abreviation (arg) it will send the 
+    previous range that was requested but with whatever retarded shit you typed
+    You want it to send an error or something
+
+[Fri 23 Apr 21]:
+ when gx doesnt understand what the day is it just sends the last task requested regardless of parameters
+ if there is no defined day in the gx command it wont work because the cell b9 has the full word but it needs to be init3 to work

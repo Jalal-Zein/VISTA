@@ -1,0 +1,259 @@
+[Mon 12 Apr 21]: 
+
+Excited but also kinda scared. good thing is the whole discord bot thing has my work cut out for me 
+since i already have made one. i am worried about using APIs since i've never used those before. kinda curious 
+how to use commands and if anything differs at all. like does working with an api change somethings in the 
+language one is coding in ??? :thonk:
+
+[Tues 13 Apr 21]:
+
+just making some updates and final touches to the bot. feels good to be coding again, yet i must say i feel
+a bit guilty since i am essentially just parroting code from someone else. i know most coding is like this 
+but i would like to be able to guess and come up with things myself, you know ? In other news i decided it's 
+best if i make this sort of like a test ground for a new bot that i will make from scratch after learning form
+the stupid mistakes i am bound to make here.
+
+[Wednes 14 Apr 21]: 
+
+WE GOT THE API WORKING BABY
+WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+[Thurs 15 Apr 21]:
+
+managed to make the thing work for any column and i feel like my cock is enormous
+it is gigantic 
+humongous 
+massive
+titanic
+its safe to say i am very happy
+
+[Fri 16 Apr 21]:
+
+we played a fair bit today so i am gonna just comment stuff just to get something done off of tasks.txt
+
+[Sat 17 Apr 21]:
+
+i just dont feel like doing anything, and the fact that i faced difficulties trying to do time stamps is not helping
+that said i feel bad because i can see production slowing down on this project but like i REALLY dont feel like working 
+this. 
+I ended up staying kidna late after i won a game of league and reset my mental, i wanna attach a pic ( its in documents now) of how fucking big, the terminal 
+output is everytime i run gat, i made every piss the bot has to make into a console log. i was at it trying to figure out why the mofoo
+was "discord api error : couldnt send empty message" for hours... you know what was the mistake ? in the for loop for what is now 
+OUT_FORMATTER : you did for (var i; i < tasks.length; i++). i dont expect you to spot it; but you didnt assign i to a value XDDDDDD
+the loop wouldnt run at all because you didnt tell it where to start. you feel stupid kinda but mostly relieved cus it looks cool as 
+hell when this thing sends a full schedule.
+
+[Sun 18 Apr 21]:
+
+so i need to go back to school on wednesday the 21st. i dont want to but i dont really have a choice, that means imma have to study 
+the old way again, like study study for real because everything is gonna be in person. that said, combined with the fact that i've 
+given myself till the end of ramadan to finish this project : i think i will be cutting down production to make more time to re-adjust
+to the whole school situation. if i manage to keep my head in it, this state shouldnt last longer than a couple days to a week MAX, 
+but historically speaking that's a stretch. Wish me luck !
+I have thoughts about get now and get (input time), it should be similiar to get today except there is a function that loops through 
+the timestamps till it finds a value that matches the input to the function and returns the task of that day of a matching index to 
+the output of that func. so to get now : the input to the func would be a manually assigned cell that is =now() in the sheet, but in
+get x it would be user provided from the message (working with command args D: )
+
+[Mon 19 Apr 21]:
+
+so i am working on this with sessions in the background and i kinda feel bad for skipping classes but whatever. my plan for get_now is 
+to have it loop through the timestamps and find the index of the timestamp that matches the current time, then it loops through the tasks
+of the day and returns the task with a matching index. i managed to get the index working, but the problem is that i literally will have to 
+run the entirety of gat.js inside of get_now... i am thinking of making it into a helper function so i can reference it if that works. but 
+it seems like a big jump where a lot of things can go wrong and i am kinda scared. but then again : that's why we have a backup folder i guess.
+what concerns me now is if i make it into a helper function : will it still work, as in will it still process and recieve input as needed ?
+I just noticed... if i make it into a helper in a manner that it could run as a 1-liner in gat.js : it would be repeating code in get_now,
+and if i make it not repeat that, it would not be independant in gat. what i can think of right now is i either make it dependant and just 
+provide it with what's missing in gat, or i just rewrite a form of gat inside of get_now, or i make the missing part in get now a helper but 
+i am not so sure about the imports and apis and how all that is gonna work inside a helper (because basically helpers are only half a program)
+i decided to just redo it inside get_now for the time being. also i'm pretty sure that's it for today cuz i got shit to study >w<
+
+explore conditional formatting in sheets to make the color of the text the same as the back of the cell so that it looks all visual but in 
+reality its not, this way both you and the computer can understand what the sheet is supposed to represent
+
+so concering get_all_x and get_x : i was thinking about how its literally just the same except day and time would be args with the command instead
+of having like 6 lines of codes to get them. but then i thought what if we make get_now get_x and get_all_x a single function; 
+it would take 2 arguments, date and time, having both as null would get now, having only a day specified would get all tasks of that day;
+having only a time as specified would get the task at that time of the current day; and obv having both specified would get that task at that day.
+this could work and we would have this one function plus get_all_today because there is no way to command that with a 2 arg system. i am wondering 
+if i should come up with a workaround and just make one giant complex get function, or  i should just keep them seperate. i think i will make them 
+seperate at first and then dump them in back ups and try to make the avenger function. 
+I was thinking also that the args thing shouldnt be that much of a problem : we can draw inspiration from how codelyon possibly handles args for 
+the music bot since you have to provide a link or a song name/artist or whatever
+
+[Thurs 22 Apr 21]:
+
+so i'm back after like 3 days!!! damn it feels good. anyway i wanted to start working on get_all_x and i discovered after stressing and watching 5 
+seconds of codelyon's music bot video that you literally dont have to do anything for the args, and that simply mentioning args in the execute literally
+does all the work for you so i am excited and will start now!
+So it looks tedious to have ANOTHER SWITCH in this func so im gonna make a range maker. remind yourself to consider its implementation in all the other 
+commands to make life easier.
+RANGE_FORMATTER WORKED FIRST TRY. LEZZ GOOOOOO
+i got the gax to work but it displays "Here is your default task for mon!". i would want it to say Monday instead of mon. i am thinking of making another 
+helper function. i am thinking we either implement it in the final message send line or we make range formatter work with full day names and we implement 
+it at the beginning of gax or before range_formatter runs at least. 
+INIT3_TO_FULL WORKED FIRST TRY TOOOOOOOOO
+yo we be speedrunning get_x and as i am going i had a thought while trying to make final message more descriptive; what if i made another helper function 
+like init3_to_full but to do this : 08 ---> 08:00 ????? nvm i did it :D
+TODAY WAS SO PRODUCTIVE LETS GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+[Fri 23 Apr 21]:
+
+well i will be heading to b2a3 in under 90mins but fuc it. lets work on dara. basically i am trying to make gx have a default day in case you dont specify 
+a day in the command, and that default will be today. i plan initially on making a if-else statement so if args does not contain a day we can use the gat 
+technique of doing things. that said, somethign feels a bit fucky about this so i made a back up of gx before adding this. if anything ever goes wrong 
+you can just go back to that. ur welcome.
+broooo everything is working in the default day thing but it shows the day as undefined... what ?
+
+[Sun 2 May 21]:
+
+god it feels good to be back. i finished math and i started chem (ie i still am not gonna go heavy on this tho i might make time for this instead of league
+but still). i dont think i have much to do today, my main goal is to fix gx default case and i will be happy. think of it as getting back in the groove.
+ok so i think the problem is that range maker isnt adjusted to take full day names like in =now() so theoritically if that is fixed we should be good?
+nevermind i found out how to have multiple cases share a peice of code to execute and that basically saved that day! LONG LIVE W3 SCHOOLS !!!!
+i ended up doing a couple fixes and revisions in a few other files but i cleared the PRIORITY tasks so i kinda am tempted to go back to league... i will :3
+
+[Tues 4 May 21]: 
+
+so today i thought lets jsut finish everything thats get on demand and get it out of the way, so i will start with the tasks part, besidesm it's crossed my 
+mind many times in the past weeks how useful it would be to just get this part over with so here we go.
+what im thinking is have a user specify the task name, the command will loop through the first column of the sheet vertically until it finds a matching name, 
+then returns all the info on the same row, which would be the tasks. i am trying to think how that would work with adding new tasks or new tasks lists. i am 
+thinking worst case scenario we can have a variable that holds for example the next available row, and when we want to add a new list it just starts writing 
+at Ax:Zx but again, we have to check how to add stuff and im starting to think : that's a problem for future me. so imma just keep going for now.
+
+[Wed 5 May 21]:
+
+well today imma try to make the task list final output look pretty. also im thinking what if you can change the schedule itself OR have timed tasks that 
+would appear on gax, gat, gn, and gx. and there would be like a reset button that returns the entire schedule to a pre-assigned schedule.
+
+[Sat 22 May 21]:
+
+i decided after banging my head against this issue for almost a month now why not just google it... the first link told me what to do. it was indirectly and i 
+had to give it a shot in the dark but i knew i had to make my input not in a string but in a list just as it gives us stuff as a list inside a list. so that was 
+an easy 1-liner. but then i noticed that it only takes the first word if you give it a sentence, so next i just joined the args list to make it a long list of all
+the args inside and it works :D Now i should make it an actual command that is also given a certain cell to edit instead of a fixed one. im thinking the command 
+syntax could look like : [prefix][command_name] [list_name] [item_number] 
+so far i am working on the full command, i am trying to utilise charcode to get the letter of the range since we need to convert from a user specified integer to 
+a letter, however it seems like i am getting russian or like... some eastern european language's characters. its really weird, and it doesnt look like ASCII at all
+i am kinda panicking but not really.
+Turns out i was adding a number to a letter so this happened : 64 + 1 = 641 and yeah.. XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+IT WORKS NOW LETS GOOOOOOOOOOOOO
+now i realise you can use a high number to add a task to the list, which makes me think : what if i made a command that auto adds to the end of a list instead of 
+the user having to know the index or look at it? we can still keep this command for the task lists, in fact we can also slightly modify it and it will work to edit 
+the actual main weekly schedule. we would have to make the changes to the way indexing works and the fact that the sorting will happen hortizontally then vertically
+rather than vertically not hortizontally, also while we can say change task x for the day, it would be better if we could address the tasks by their hours.
+I think i go to sleep now but i am excited to finally resume work on this project. but yet again, work will only get slower with the finals and official exams getting 
+closer by the second.
+In my head, the add command should not be a problem, the only thing that will differ is that the index is not provided, and we can just make a for loop that loops 
+through all the row of the specified list until it finds an empty cell and takes its index. now that i type that however, how will we know if it's empty without 
+the entire mess of actually getting its value from the api... sounds like a lot of work for a single command but you know.
+
+[Sun 23 May 21]:
+
+so today i embarked on the adventure that is finishing today's work and getting etl to work for multiple words turned out to be less scary than i expected, i literally 
+just made a for loop to make a string out of every arg after the second and put that in an array in an array. I also am cleaning up some useless variables. i am afraid 
+tho that i am oversimplifying to the point where it won't be understandable in the future. but i guess that's what comments are for right? also since we are running on
+a fucking excel api integrated in a chat bot we kinda need to be as efficient as possible.
+I'm thinking to DIFFERENTIATE between add and edit tasks i make the code check if the specified index in edit is greater than the length of tasks somehow and if it is 
+it will display a message saying you cant edit an empty cell or something.
+ok so i managed to that and i feel like this command has gotten so complex there must be a but somewhere but i cant be assed to find it :P
+Now i wanna start thinking about remove task. shouldnt be hard : just update the cell to be empty. the challange comes when you wanna make it good ie. how do we make it 
+shift the tasks up
+
+[Mon 24 May 21]:
+
+today i plan to start and hopefully finish some part of the add task command. i am thinking it just uses the regular method of looking for the list name for the ordinate
+and then number of items in that list + 1 for the abscissa.
+IT WORKED FIRST TRY. I AM NOT EVEN EXAGGERATING OR LIKE "IT NEEDED A MINOR FIX OR ANYTHING" IT JUST WORKED !?!?!?!?!??!?!?!!!!!
+now i wanna work on the remove task thing. obv its really easy to delete tasks; just update them with them null values. but the trick is how do i make the command auto 
+organize the remaining tasks so that there are no empty slots in the middle... im thinking some kind of for loop that will iterate through all the tasks after the deleted 
+index and assign their values to the cell right behind.
+as expected, the deletion part works perfectly first try. now onto the real deal.
+well after a lot of undocumented tries and fails, some were stupid, some were not, some i am still unsure about how or why got fixed... but it matters not. in the end 
+we did finish it.
+
+[Fri 28 May 21]:
+
+so today i just wanna finish stuff and get it out of the way. i am trying to finish as much as i can before the real exams period hits. i just made it so that etl now 
+displays changes it's made. i will now progress to make a command that just gets all the task list names/titles. 
+So i did all that, and i went ahead and made a command that can add new empty lists.
+now i am working on a command that will delete a list with all its content. the thing is; do i make it update each cell on its own and loop through all the row to update
+it to null... or do i learn to batch update since i wanted to maybe learn that anyway ??? I think i will go with the latter option but i will leave to tomorrow/next time 
+because its almost 2am and my head is about to explode already so i think im just gonna go to sleep.
+Also i've been thinking about not making this a discord bot, and that i can make this a mobile app and a desktop app that will transfer easily because of the way visual studio
+and visual studio code work and maybe i get to do something with c# tho i think i can keep it as js and yeah. 
+
+[Sun 30 May 21]:
+ 
+today i was supposed to finish dtl but i ended up spending like 2 hours debugging at because apperantly it can't add tasks for empty lists, it was a simple error of basically 
+if the list is empty the code was considering it as if the number of tasks is undefined which obv causes a problem, the equally simple solution was telling it to take it as 0 
+if it is undefined. 
+back to dtl there is issues with spaces, as in if a list has a space in its name but you dont include the space in your command it doesnt work and vice versa, so i had to 
+put some .trim() in a couple places but it works now :D
+I MADE ETL AND IT WORKS FIRST TRY LETS GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+[Mon 31 May 21]:
+
+so i for today i was gonna make the help function not retarded... i managed to make it work first try in 3 lines.
+that said it worked only if you typed out the full name of the command file so i wanted to change that so that it takes in by default the abbreviation of the command... it's not 
+going well. for some reason it's not able to realise that things are equal when they are (command.name and command_name). i checked the spaces, i checked the types i think...
+idk what else it could be.
+NEVER FUCKING MIND I HAD ONE EQUAL SIGN IN THE IF STATEMENT INSTEAD OF TWO... KILL ME AND LET ME BURN IN HELL 
+good news is that it works now and it (in theory) works for all future commands with no work being done.
+now i'm working on making a get_all_commands command which is basically the old help command except now it's more indicative of what it actually does. but i am struggling a bit 
+with presentation and formatting. like how even do i display that amount of commands -with more to come, possibly- in somehting that doesn't look bad, an embed is what first came 
+to mind but i can't make it take in future commands without mannually inserting them myself. i think i'm just gonna leave it till later :P
+
+[Mon 14 Jun 21]:
+
+it's been 2 weeks... honestly feels longer but anyway, today i was in the mood of the void and this was the only thing that didn't sound like cancer to sit through so here i am
+i am trying to finish up and polish the help command and the get_all_commands thing so yeah. for now i managed to fix bug that crashed the bot when you try >..help commands 
+i don't know what the bug was or how i fixed it but it was there and i added some stuff then removed them and now it works so. for the commands thing : for now i'll just make it 
+print out the command name on a line then it's description on another for all the commands. it works first try obv you should not be suprised at this point but i will be doing 
+this thing where i'll make another attribute for module.exports called description2 and it'll have the function description without the syntax and then the command will work with 
+that instead of the full ugly description.
+
+[Sat 26 Jun 21]:
+
+well i don't have the energy for this. the mistake that's happening is that in ready.js get doesn't work because channel is not defined or something. basically figure out a way 
+to target a specific channel to send the thing to
+
+[Mon 28 Jun 21]:
+ 
+YOU WILL NEVER GEUSS WHAT FIXED IT... YOU HAD TO SWITCH THE ORDER OF THE ARGUMENTS INSIDE THE EXECUTE LINE IN THE EVENT HANDLER. YOU HAD client.on(event_name, event.bind(null, Discord, client));
+but it should be client.on(event_name, event.bind(null, client, Discord));
+ok so now this works.
+now according to the command structure thing that i wrote all that remains is having the same thing happen but to routines. it's gonna be a bit different since with routines they
+will sens at a specific time of the day everyday not every specific time interval. that said it shouldnt be that different. after that all that remains is having the bot run 24/7
+right now i am wondering if we should make the hourly notification a function, and then make another one for routines for the sake of tidiness in ready.js but at the same time that
+might break something sooo.
+ok so for tomorrow or whatever next time i work on this will be : your task is to try and make the notifications thing a seperate function in tools.js
+i am thinking you can just copy paste it as is and see how things go. i made a copy called "ready (after notifications).js" so if anything goes wrong just replace ready.js with that.
+if that works do the same for routines. if not just make routines in the same way we did notifications under it.
+also i am gathering some stuff to keep the bot online, look for them in stuff.txt
+
+[Tues 29 Jun 21]:
+
+so today i tried to make the notifications thing a seperate functions but as you can see that doesn't entirely work. i managed to get auto routines working tho. now that it's close to 
+bedtime i remembered i should maybe document what i'm doing, so here i am. i am currently making the routine on-demand commands (get, getlist, edit, editlist, delete, deletelist, add, 
+addlist) so yeah. i finished get so now i do the others. after this i just need to switch to the main sheet and i think we're done. check the change log to see what i managed to do :0
+
+[Wednes 30 Jun 21]: 
+
+No way... 3 days in a row???? who is this guy ?? anyway i finished edit_routine_task and today i plan to finish all the routine tasks and if i do that then i will implement sched edit and 
+i think we can upload the bot at that point.
+well... it is currently 1.27 am in thursday and i finished everything pretty much. i will now convert to the original sheet.
+i hope i don't break stuff doing this.
+SO IT'S NOW 02:26 BUT IT DOESN'T MATTER. I JUST DID THAT AND I JUST GOT FINISHED TESTING ALL THE COMMANDS... THEY WORK. THEY FUCKING WORK. ALL OF THEM. LETS FUCKING GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+ALL THAT REMAINS IS MINOR BUG FIXES, THE REST IS UPDATES. SO WE NEED TO MAKE A VERSION TEXT FILE AND JUST UPLOAD THIS THING SOMEWHERE. BUT IT'S OVER. IT REALLY TRULLY IS. HOLY SHIT.
+24 DAYS OF WORK (OF VARYING HOURS OFC) SPREAD OVER TWO AND A HALF MONTHS HAVE LED TO THIS. I REALLY HOPE DARA WILL BE A SAVING LIGHT FOR ME.
+the worst part is, now that she is done, there is only i to blame if something goes wrong, i used to say my family members should remind me and kinda force me to do stuff and that's 
+why i'm lazy, and when they did it, it was bad technique... now tha ti have dara, she will never fail to remind me, and she will do it exactly how i want it to be done. however i can 
+still fail to care, or succeed in not listening. hopefully i don't. hopefully this is the start of my redemption arc. with the economic situation going to shit rn and not even slowing 
+down in it's descent, i will need to do very well on the officials, and after that, if LAU doesn't work out and i end up in LU i will be in vital need of something like dara to keep
+me in check. i hope i can myself proud.
+but in terms of this project, i am very happy, it was fun, i never actually raged. i overcame my fear of APIs. i learned the best logical way to code, and how to use comments to plan 
+functions and stuff like that. and now i actually have something to show in terms of my ability to code. so i would say this adventure was as successul as can be. of course i can still
+take this places further by making it a stand alone application but for now, let's calm our tits and enjoy this victory. 

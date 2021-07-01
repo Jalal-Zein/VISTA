@@ -1,0 +1,83 @@
+# ar
+add a blank new routine
+
+# at
+adds a new task at the end of a specified list
+
+# atl
+makes a new empty list titled [new_task_list_name]
+
+# atr 
+adds a task to a routine
+
+# drt 
+deletes a specified task from a routine
+
+# dr 
+deletes the routine including all the tasks contained within it
+
+# dt
+deletes the task (and organizes the remaining tasks)
+
+# dtl
+deletes the task list and all its contents
+
+# ert 
+updates an existing task in a routine
+
+# er 
+changes the title of an existing routine
+
+# es 
+updates the task of a specific hour in a specific day
+
+# et
+changes arg task of arg list to arg value
+
+# etl
+changes old title of the specified task list to a new specified one
+
+# commands
+will list all the present active and inactive commands
+
+# gat
+gets all scheduled tasks in for the current day
+
+# gax
+all scheduled tasks for the specified argument
+
+# gn
+gets the task scheduled for the current hour in the current day
+
+# grl 
+gets the titles of all existing routines
+
+# grx
+gets all the tasks within that routine
+
+# gt
+items inside specified list
+
+# gtl
+displays all list titles available
+
+# gx
+gets the scheduled task for the argument hour in arg day
+
+# help
+returns description and syntax of specified command
+
+# lilpog
+she guesses whether you are her little pogchamp
+
+# opgg
+links to YOUR op.gg!!
+
+# ping
+responds to YOUR pings, with pongs!!
+
+# test
+undefined
+
+# youtube
+sends youtube link to FMJaii's channel

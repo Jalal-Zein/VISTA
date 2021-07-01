@@ -1,0 +1,81 @@
+﻿ 
+----------------------------- PRIORITY ------------------------------
+
+ - look into the problems caused when having a routine or task list name be more than word, because when you want to add or edit or something, ie in cases
+   where you would have more than 1 argument entered by the user the second word of the list/routine name will count for the second argument 
+   // FOR NOW JUST HAVE EVERYTHING BE ONE WORD IF POSSIBLE
+ - host your bot ?
+ - get_now check if now and time_string can be made directly since we now have a time that is only hours
+ - bug where if you delete stuff but don't reorganize, it will fuck up their index because they will appear without empty spaces but are not indexed like that
+ - fix commands.txt so that it's sorted by sheet in Sched
+ - explore where tts could be useful since you can do that
+   by , { tts: true} inside the send() btw
+ - there is still some console.logs to remove somewhere btw
+
+
+----------------------------- GENERAL -------------------------------
+ 
+ - maybe figure out a way to make tomorrow tasks auto move to priority once a day has passed
+ - decide on a defenitive name for dara 
+ - make an entirely new bot ?
+ - upload dara to a server
+ - change dara's twitter handle
+ - maybe an economy tab where you can track what you bought during a month and where your income came from and stuff
+ - hourly hydration reminder ?
+ - maybe a batch update option where you overwrite all the tasks 
+ - add tts to user feedback ? (currently tested on atl)
+ - test message.reply('')
+ - test expectedargs and stuff like that from  the cool stuff video in stuff.txt
+ - complete crt
+
+----------------------------- DONE ----------------------------------
+ 
+ - test getall on a full schedule // gat.js 
+ - make a "get all commands" command
+ - change getall to get_today or something // gat.js
+ - ask nagham to make dara a reality ? 
+ - begin linking the bot to a random sheet
+ - change the args in gat to match the format of =NOW()
+ - make getall give times and acts instead of only acts
+	ie : make get give 2 return 2 ranges to the user instead of one per command
+ - remove / comment out all the console.log that you have put in
+ - comment in the new stuff for documentation 
+ - test the possibility of getting a single task depending on day and time
+	ie : current_task command 
+	ie : get_now.js
+ - check if you can get anything about a cell's color from info.data or something // ANSWER : doesnt look like it :(
+ - test the conditional formatting visual reading thing (19apr21 dev jrnl para 2)	// ANSWER : IT WORKS!!! (text contains : task --> same font and cell color)
+ - make init3_to_full
+ - get_all_x 
+ - get it rid of getall.js it serves no purpose 
+ - get_x	
+	ie : should work for a time today or a specific time and day
+ - explore making the await line and the .data.values line into one line // ANSWER: no... i tried it and it didnt work, i reverted it and it worked. so no.
+ - go back to a codelyon video and try to figure out the correct order of parameters to put in execute // ANSWER: pretty sure its client, message, args, Discord
+ - FIX TEST AND IMPLEMENT IT TO SET TASKS
+ - make etl work with more than just one word in the value 
+ - clean up the code and variables in etl
+ - DIFFERENTIATE BETWEEN ADD TASK / EDIT TASK / REMOVE TASK 
+ - remove console logs from all commands
+ - delete task command
+ - add task command
+ - maybe make etl display the entire list after it makes changes
+ - a command to get all tasks lists without their contents
+ - an add list command
+ - a delete list command
+ - edit task list title command
+ - EXPLORE THE POSSIBLITY OF DARA BEING A TWITTER / REDDIT / INSTAGRAM / WHATSAPP BOT  // ANSWER: she's gonna be her own app
+ - make commands shorter or add alternate command names
+ - figure out how help is gonna work
+ - remove comments from help.js
+ - look into the whole switch and gat situation in get_now.js
+ - make the routine thing loop through the routine tasks not just paste them
+ - make it so that the bot doesn't send anything if after the first time you send sleep intil the morning // IN ORDER FOR THIS TO WORK CHANGE THE TIMES YOU DON'T WANT TO BE 
+   DISTURBED DURING TO "sleep2"
+ - maybe make the commands command open a chrome tab with html ? // TOO MUCH WORK SO I MADE IT SEND A ATTACHMENT OF A TXT FILE. STILL BETTER THAN JUST SPAMMING
+ - complete edit_routine_task.js
+ - remove console logs from new commands
+ - edit schedule
+ - complete all the remaining routine commands
+ - add all the new commands to the all commands list
+ - explore if you can have timed messages for notifications // YOU CAN I GUESS

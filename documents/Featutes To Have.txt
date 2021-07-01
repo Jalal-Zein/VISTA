@@ -1,0 +1,14 @@
+﻿Schedule Reading                                                                            get_now get_all_xday get_all_today get_x
+Schedule Editing                                                                            set ?
+Schedule Notifications / Reminders                                                          ???
+Future Tasks / Events Reminder                                                              set + noti
+Tasks Reading                                                                               get all with a different sheet + range 
+Tasks Editing                                                                               set with a different sheet + range
+    different tasks lists ???
+Routine Tasks Reminder                                                                      idk man the irregularity of the cycle is hard
+(tasks are also in a table, numbered and you can access them kike anything else)
+// Default WhatsApp Iteration
+Twitter Account (Human handling)
+Routine Task Integration (Morning Routine / Sleep Routine)                                  noti + get all tasks except tasks are a routine 
+Personal Medical/Interests Profile                                                          get now with different sheet + range
+Password Safe                                                                               tasks system but for emails and passwords for services

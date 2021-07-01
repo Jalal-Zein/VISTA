@@ -1,0 +1,13 @@
+service account email : dara-test@jaeibot.iam.gserviceaccount.com
+video tutorial : https://www.youtube.com/watch?v=MiPpQzW_ya0
+google sheets api for node.js : https://developers.google.com/sheets/api/quickstart/nodejs
+very useful video to show different way to handle args and other cool stuff check it out: https://www.youtube.com/watch?v=C3rfFINhMZw
+
+maybe have nagham draw emote like things for good morning or good night reminders
+	so like dara would send the routine along with a pic of her snoozing and it says "good night <3"
+	or in the morning she sends the routine with a pic of her stretching
+
+
+try some of these to keep the bot online forever :
+https://www.youtube.com/watch?v=wZbAinOmays
+https://www.youtube.com/watch?v=8qIsRzV0Hpg
