@@ -48,8 +48,8 @@ module.exports = (client, message, Discord, args) => {
 
 			// assigns a manually entered range to 'timestamps'
 			const ts = {
-				spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-				range: 'Sheet1!A2:A7',
+				spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+				range: 'Schedule!B3:B26',
 			}
 			// gets the content of the cells in the assigned range
 			// gets the values of the cells 
@@ -57,15 +57,15 @@ module.exports = (client, message, Discord, args) => {
 			let ts_array = (await gsapi.spreadsheets.values.get(ts)).data.values;
 
 			const hour = {
-				spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-				range: 'Sheet1!C9:C9'
+				spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+				range: 'Schedule!O3'
 			}
 			let hour_string = (await gsapi.spreadsheets.values.get(hour)).data.values[0][0];
 
 			// gets the current day 
 			const day = {
-				spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-				range: 'Sheet1!B9',
+				spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+				range: 'Schedule!K3',
 			}
 			let day_string = (await gsapi.spreadsheets.values.get(day)).data.values[0][0];
 
@@ -77,8 +77,8 @@ module.exports = (client, message, Discord, args) => {
 				case 'Monday':
 					// assigns a manually entered range to the day
 					const mon = {
-						spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-						range: 'Sheet1!B2:B7',
+						spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+						range: 'Schedule!C3:C26',
 					}
 					// gets the content of the assigned cells
 					// gets all the values of all the tasks in a formatted way 
@@ -90,8 +90,8 @@ module.exports = (client, message, Discord, args) => {
 
 				case 'Tuesday':
 					const tues = {
-						spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-						range: 'Sheet1!C2:C7',
+						spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+						range: 'Schedule!D3:D26',
 					}
 					let tues_tasks = (await gsapi.spreadsheets.values.get(tues)).data.values;
 					text_message = tues_tasks[task_index];
@@ -99,8 +99,8 @@ module.exports = (client, message, Discord, args) => {
 
 				case 'Wednesday':
 					const wednes = {
-						spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-						range: 'Sheet1!D2:D7',
+						spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+						range: 'Schedule!E3:E26',
 					}
 					let wednes_tasks = (await gsapi.spreadsheets.values.get(wednes)).data.values;
 					text_message = wednes_tasks[task_index];
@@ -108,8 +108,8 @@ module.exports = (client, message, Discord, args) => {
 
 				case 'Thursday':
 					const thurs = {
-						spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-						range: 'Sheet1!E2:E7',
+						spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+						range: 'Schedule!F3:F26',
 					}
 					let thurs_tasks = (await gsapi.spreadsheets.values.get(thurs)).data.values;
 					text_message = thurs_tasks[task_index];
@@ -117,8 +117,8 @@ module.exports = (client, message, Discord, args) => {
 
 				case 'Friday':
 					const fri = {
-						spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-						range: 'Sheet1!F2:F7',
+						spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+						range: 'Schedule!G3:G26',
 					}
 					let fri_tasks = (await gsapi.spreadsheets.values.get(fri)).data.values;
 					text_message =  fri_tasks[task_index];
@@ -126,8 +126,8 @@ module.exports = (client, message, Discord, args) => {
 
 				case 'Saturday':
 					const satur = {
-						spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-						range: 'Sheet1!G2:G7',
+						spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+						range: 'Schedule!H3:H26',
 					}
 					let satur_tasks = (await gsapi.spreadsheets.values.get(satur)).data.values;
 					text_message = satur_tasks[task_index];
@@ -135,8 +135,8 @@ module.exports = (client, message, Discord, args) => {
 
 				case 'Sunday':
 					const sun = {
-						spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
-						range: 'Sheet1!H2:H7',
+						spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+						range: 'Schedule!I3:I26',
 					}
 					let sun_tasks = (await gsapi.spreadsheets.values.get(sun)).data.values;
 					text_message = sun_tasks[task_index];
@@ -181,13 +181,13 @@ module.exports = (client, message, Discord, args) => {
 		const gsapi = google.sheets({ version: 'v4', auth: cl });
 
 		const morning = {
-			spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
+			spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
 			range: 'Routines!B1:Z1'
 		}
 		let morning_routine = (await gsapi.spreadsheets.values.get(morning)).data.values;
 
 		const night = {
-			spreadsheetId: '1EbdTodl_ZwQNLbEDHwpPhWLkYTCqH6sDGISSTF0PuPg',
+			spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
 			range: 'Routines!B2:Z2'
 		}
 		let night_routine = (await gsapi.spreadsheets.values.get(night)).data.values;
