@@ -201,7 +201,7 @@ module.exports = (client, message, Discord, args) => {
 			for (y of morning_routine) {
 				user.send('- ' + y);
 			}
-		});
+		}, undefined, true, "Asia/Beirut");
 
 		global.night_routine_time_string = '00 30 01 * * *';
 		let routine_2 = new cron.CronJob(night_routine_time_string, () => {
@@ -210,7 +210,7 @@ module.exports = (client, message, Discord, args) => {
 			for (x of night_routine) {
 				user.send('- ' + x);
 			}
-		})
+		}, undefined, true, "Asia/Beirut");
 
 		routine_1.start()
 		routine_2.start()
