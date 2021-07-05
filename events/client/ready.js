@@ -198,8 +198,8 @@ module.exports = (client, message, Discord, args) => {
 		let routine_1 = new cron.CronJob(morning_routine_time_string, () => {
 			const user = client.users.cache.get('367386925323124748');
 			user.send('Good morning! It is 10 O\'Clock. Here is your default Morning Routine:');
-			for (y of morning_routine) {
-				user.send('- ' + y);
+			for (let x = 0; x < morning_routine[0].length; x++) {
+				user.send('- ' + morning_routine[0][x]);
 			}
 		}, undefined, true, "Asia/Beirut");
 
@@ -207,8 +207,8 @@ module.exports = (client, message, Discord, args) => {
 		let routine_2 = new cron.CronJob(night_routine_time_string, () => {
 			const user = client.users.cache.get('367386925323124748');
 			user.send('It is almost time for bed :/ \n Here is your default Night Routine :');
-			for (x of night_routine) {
-				user.send('- ' + x);
+			for (let x = 0; x < night_routine[0].length; x++) {
+				user.send('- ' + night_routine[0][x]);
 			}
 		}, undefined, true, "Asia/Beirut");
 

@@ -80,6 +80,13 @@ module.exports = {
 
                 // makes a range string based on the task list title and task index
                 let xxrange = 'Tasks!' + task_index_letter + tl_index;
+
+                // old task value
+                const better = {
+                    spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
+                    range: xxrange,
+                }
+                let old_task_value = (await gsapi.spreadsheets.values.get(better)).data.values;
             
                 // updates the values on the sheet
                 const good = {
@@ -90,18 +97,7 @@ module.exports = {
                 }
 			    let resp = await gsapi.spreadsheets.values.update(good);
 
-
-                // fucky stuff to make the command display the changes afterward
-                let xyrange = 'Tasks!B' + tl_index + ':Z' + tl_index;
-                const better = {
-                    spreadsheetId: '1Q4ZlP7dChLUfMiY19-c6PpHvyg6WWqsCU8e6LabuTHQ',
-                    range: xyrange,
-                }
-                let betterest = (await gsapi.spreadsheets.values.get(better)).data.values;
-                message.channel.send('Your changes have been saved! \nHere is the new list:')
-                for (x of betterest) {
-                    message.channel.send(x);
-                }
+                message.channel.send('" ' + old_task_value + '" has been updated to "' + task_list_name + '" !')
             }
         }
     }

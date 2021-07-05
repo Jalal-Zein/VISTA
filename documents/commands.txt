@@ -1,4 +1,4 @@
-                        --- Miscellaneous     ---
+                            --- Miscellaneous     ---
 
 # commands
 will list all the present active and inactive commands
@@ -22,7 +22,7 @@ undefined
 sends youtube link to FMJaii's channel
 
 
-                        --- Schedule Commands ---
+                            --- Schedule Commands ---
 
 # es 
 updates the task of a specific hour in a specific day
@@ -41,7 +41,7 @@ all scheduled tasks for the specified argument
 
 
 
-                        ---  Tasks Commands   ---
+                            ---  Tasks Commands   ---
 # at
 adds a new task at the end of a specified list
 
@@ -67,7 +67,7 @@ items inside specified list
 displays all list titles available
 
 
-                        --- Routines Commands ---
+                            --- Routines Commands ---
 
 # ar
 add a blank new routine

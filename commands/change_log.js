@@ -1,0 +1,40 @@
+const { MessageAttachment } = require('discord.js');
+const fs = require('fs');
+module.exports = {
+    name: 'changelog', 
+    description: '[prefix]changelog --> provides all the changes implemented since release!',
+    description2: 'provides all the changes implemented since release!',
+
+    execute(args, message, Discord) {
+         // makes a google object to interact with
+		const { google } = require('googleapis');
+        
+		// gets some important files 
+		const keys = require(`../keys.json`);
+        
+		// makes a google client to interact with 
+		const gclient = new google.auth.JWT(
+            keys.client_email, 
+            null, 
+            keys.private_key, 
+            ['https://www.googleapis.com/auth/spreadsheets'],
+        )
+        
+		// authorizes the client 
+		// kind of he main function that runs 
+		gclient.authorize(function(err, tokens) {
+            if (err) {
+                console.log(err);
+                return;
+            } else {
+                gsrun(gclient);
+            }
+        })
+
+        async function gsrun(cl){
+
+            message.channel.send(new MessageAttachment('./documents/ChangeLog.txt'));
+
+        }
+    }
+}

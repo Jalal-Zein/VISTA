@@ -1,0 +1,6 @@
+[Mon 5 July 21] - v1.0.1 :
+* made the spreadsheet command
+* made the routine message content multiline
+* modified edit_task 's user feedback to become simpler
+* removed console.log() from get_tasks 
+* made the changelog command

@@ -61,8 +61,6 @@ module.exports = {
                 range: xrange,
             }
             let list_info_v = (await gsapi.spreadsheets.values.get(list)).data.values;
-            console.log('list_info_v : ');
-            console.log(list_info_v);
 
            for (let i = 0; i < list_info_v[0].length; i++){
                if (list_info_v[0][i] !== ''){

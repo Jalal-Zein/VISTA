@@ -1,6 +1,6 @@
 {
   "name": "jaeibot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Life Organizer Bot",
   "main": "main.js",
   "scripts": {

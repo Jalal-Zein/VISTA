@@ -1,0 +1,5 @@
+v1.0.2
+
+" 1 " : is the version number. it represents major changes that affect the fundementals of how the bot works.
+" 0 " : represents new implementations within a version, like new commands, new systems , etc.
+" 2 " : represents bug fixes and dev commands.
