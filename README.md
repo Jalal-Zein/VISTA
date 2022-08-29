@@ -1,8 +1,8 @@
-# DARA
+# VISTA
 Hello!!
 This is my first major project on github!
-## What is DARA?
-DARA stands for _ _ _ _
+## What is VISTA?
+VISTA stands for VIrtual Scheduling and Tasks Assistant
 It's supposed to be my personal scheduling assistant. This project is a Discord bot that pulls information from a Google Sheets spreadsheet to help me view & edit my schedule, keep track of todos, and remind me to follow essentials routines!
 ## What technologies are used?
 This project was entirely built with JavaScript and node.js
