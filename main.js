@@ -17,7 +17,5 @@ client.events = new Collection();
 })
 
 // connecting this code to discord's servers using the bot's token 
-// the token can be found and regenerated here in case of whatever : https://discord.com/developers/applications/780060200174485514/bot
-// client.login('NzgwMDYwMjAwMTc0NDg1NTE0.X7plrA.kEVfQyB_RHRG3JhXH9pWuPABcmw'); <-- this is prehosting
 client.login(process.env.token);
 
