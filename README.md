@@ -7,7 +7,7 @@ It's supposed to be my personal scheduling assistant. This project is a Discord 
 ## What technologies are used?
 This project was entirely built with JavaScript and node.js
 ## What did I learn?
-This was my first time using non-vanilla JavaScript, discovering what it means practically to use a JavaScript framework!
+This was my first time using a node.js, so I discovered what it means practically to use a JavaScript framework!
 I also learned how to interact with an API for the first time as well!
-I familiarized myself with github as well!
+I familiarized myself with github!
 Last but not least, I used a hosting service for the first time!
